@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: jobposts
+#
+#  id            :integer          not null, primary key
+#  post_title    :string(255)
+#  city_state    :string(255)
+#  country_id    :integer
+#  referrer_code :string(255)
+#  user_id       :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  post_title: MyString
+  city_state: MyString
+  country_id: 1
+  referrer_code: MyString
+  user_id: 1
+
+two:
+  post_title: MyString
+  city_state: MyString
+  country_id: 1
+  referrer_code: MyString
+  user_id: 1

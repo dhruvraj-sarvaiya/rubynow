@@ -1,0 +1,52 @@
+
+        <div id="info">
+  <p>
+  </p><h2>Job Post Dashboard</h2> 
+  Welcome <%= @user.name %> (<%= @user.email %>) | <%= link_to 'Update Account Details', edit_path %>  <br>
+<p></p>
+
+<p>
+  </p><ul>
+    <li>All posts are approved manually to ensure a quality experience for our members. We try to optimize for a best time of day to publish posts to get the maximum traffic for you and this is typically within 24 hours of submission.</li>
+    <li>For Premium posts we'll reach out for a time to review your post. Please let us know if you want the post sent out immediately.</li>
+    <li>Jobs are active for 30 days. After that they are no longer listed on the site.</li>
+    <li>If you have any questions, please call (888) 669-2937 or email at <a href="mailto:steve@rubynow.com">steve@rubynow.com</a></li>
+  </ul>
+<p></p>
+
+<br>
+    <table cellspacing="5">
+      <tbody><tr><th>ID</th>
+      <th>Preview</th>
+      <th>Posting Type</th>
+      <th>Paid</th>
+      <th>Published</th>
+      <th>Listed</th>
+      <th>Created</th>
+      <th colspan="2"></th>
+      <!-- <th colspan='2'>Buy Premium</th> -->
+        </tr><tr>
+          <td>6277</td>
+          <td><a href="/jobs/6277">sample job post</a></td>
+          <td>Premium</td>
+          <td>No</td>
+          <td align="center">No</td>
+          <td align="center">No</td>
+          <td><span>Sun Aug 11 2013 13:51:29</span></td>
+          <td><a href="/post/jobs/6277/edit">edit / pay</a></td>
+          <td><a href="/account/jobs/6277" data-confirm="Are you sure?" data-method="delete" rel="nofollow">delete</a></td>
+       </tr>
+    </tbody></table>
+
+    <% if @user.jobposts.any? %>
+      <h3>Job Posts (<%= @user.jobposts.count %>)</h3>
+      <ol class="jobposts">
+        <%= render @jobposts %>
+      </ol>
+      <%= will_paginate @jobposts %>
+    <% end %>
+  To create a new job post : <a href="http://jobs.rubynow.com/post/jobs/new" title="Post a new job">Post a Job</a>
+
+</div>
+
+      

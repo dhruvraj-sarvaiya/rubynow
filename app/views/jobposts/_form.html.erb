@@ -1,0 +1,48 @@
+<%= form_for(@jobpost) do |f| %>
+  <% if @jobpost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jobpost.errors.count, "error") %> prohibited this jobpost from being saved:</h2>
+
+      <ul>
+      <% @jobpost.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :post_title %><br />
+    <%= f.text_field :post_title %>
+  </div>
+  <div class="field">
+    <%= f.label :city_state %><br />
+    <%= f.text_field :city_state %>
+  </div>
+  <div class="field">
+    <%= f.label :country_id %><br />
+   
+   
+   
+    <% #select_tag(:country_id, options_for_select(@country.collect{ |c| [c, @country.index(c)]}, 0)) %>
+    <%= f.select :country_id, options_for_select(@country.collect{ |c| [c, @country.index(c)]},@jobpost.country_id) %>
+    
+    <!-- 
+      <% @country.each do |c| %>
+        <%= [c, @country.index(c).to_s] %>
+      <% end %>
+
+     -->
+  </div>
+  <div class="field">
+    <%= f.label :referrer_code %><br />
+    <%= f.text_field :referrer_code %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

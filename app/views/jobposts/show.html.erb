@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Post title:</b>
+  <%= @jobpost.post_title %>
+</p>
+
+<p>
+  <b>City state:</b>
+  <%= @jobpost.city_state %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @jobpost.country_id %>
+</p>
+
+<p>
+  <b>Referrer code:</b>
+  <%= @jobpost.referrer_code %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @jobpost.user_id %>
+</p>
+
+<% if @user.jobpost.any? %>
+      <h3>Job Posts (<%= @user.jobpost.count %>)</h3>
+      <ol class="jobposts">
+        <%= render @jobpost %>
+      </ol>
+      <%= will_paginate @jobpost %>
+    <% end %>
+
+<%= link_to 'Edit', edit_jobpost_path(@jobpost) %> |
+<%= link_to 'Back', jobposts_path %>

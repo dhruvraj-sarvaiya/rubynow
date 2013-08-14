@@ -1,0 +1,51 @@
+<div id="header" class="span-24">
+			<div id="logo" class="span-7">
+				<%= link_to root_path, id: "logo" do %>
+				<h1>RubyNow: Ruby Jobs | Niche Ruby on Rails Jobs Board</h1>
+				<% end %>	
+			</div>
+			<div id="navigation" class="span-17 last">
+				<div id="top-nav" class="span-17 last">
+					  <%= link_to "Home",    root_path %>
+					  
+		              <%= link_to "Why RubyNow?",    whyrubynow_path %>
+		              
+		              <%= link_to "Post a Job",    '#' %>
+		              
+		              <%= link_to "Ruby Guides",    rubyguides_path %>
+		              
+		              <%= link_to "Expert Advice",    expertadvice_path %>
+		              
+		              <%= link_to "RSS",    '#' %>
+		              <% if signed_in? %>
+		              		<%= link_to "Account", dashboard_path %>
+		              		<%= link_to "Sign out", signout_path %>
+		              <% else %>
+		              <%= link_to "Sign in", signin_path %>
+		              <% end %>
+				</div>
+				<div class="span-17 prepend-0 last" id="subscribe">
+				    <div class="span-11 prepend-4 last">
+				        <div class="span-11">
+				          <div class="span-6"><h2>Ruby Job Alerts</h2></div>
+				          <div id="twitter-div" class="span-4"><iframe scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.1375828408.html#_=1376389214426&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=FindTechJobs&amp;show_count=false&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" style="width: 150px; height: 20px;" title="Twitter Follow Button" data-twttr-rendered="true"></iframe></div>
+				        </div>
+				        <div class="span-11">
+				          <div style="font-size:1.25em;" class="quiet">
+				            Latest ruby jobs posted from New York, Chicago, California, and the world, sent to your inbox (digest options available).
+				          </div>
+				          	<div class="inline">
+					            <span style="font-size:16px;">Email :</span> 
+					            <form method="post" class="inline" action="/updates" accept-charset="UTF-8">
+					            	<div style="margin:0;padding:0;display:inline">
+					            		<input type="hidden" value="✓" name="utf8"><input type="hidden" value="baytBPEAeudP93SM5uqqNAaanFfk0ZFf27c3pZSizRo=" name="authenticity_token">
+					            	</div>
+					            	<input type="text" size="32" name="update[email]" id="update_email">
+					            	<input type="submit" value="Get Job Alerts" name="commit" class="button-green inline">
+								</form>          
+							</div>	
+				        </div>
+				    </div>
+    			</div>
+			</div>
+		</div>

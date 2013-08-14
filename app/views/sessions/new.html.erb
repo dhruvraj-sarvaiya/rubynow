@@ -1,0 +1,26 @@
+<% provide(:title, "Sign in") %>
+
+        If you don't have an account, then go to the <%= link_to 'create account', signup_path %> page.<br>
+If you already have an account and have lost your password, go to the <%= link_to 'reset account', 'password_reset_request/new' %> page.<br><br>
+
+
+
+<div title="Account login" id="loginform" class="form">
+    <h3>Please login</h3>
+
+    <%= form_for(:session, url: sessions_path) do |f| %>
+    	<%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <br>	
+      <%= f.submit "Sign in", class: "button inline" %>
+    <% end %>
+
+</div>
+
+
+
+      

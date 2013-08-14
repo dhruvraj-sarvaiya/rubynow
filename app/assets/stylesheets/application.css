@@ -11,3 +11,964 @@
  *= require_self
  *= require_tree .
  */
+/* application.css */
+
+/* general elements */
+
+a, a:link {
+    color: #DA7B32;
+    /* color:#9E2021;  red logo */
+    text-decoration: underline;
+}
+
+a.rss {
+    padding:2px 22px 2px 0;
+    margin:-2px 0;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-image: url(blueprint/plugins/link-icons/icons/feed.png)
+}
+
+.submit {
+    color: black;
+    background-color: #FABF8F;
+    padding: 2em;
+    border: 1px solid #999;
+    font-size: 1.1em;
+}
+
+.center {
+    text-align: center;
+}
+
+/* header - navigation */
+
+#header {
+    margin-bottom: 5px;
+}
+#logo {
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    text-align: center;
+    height: 126px;
+}
+
+#logo_admin {
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    text-align: center;
+    height: 85px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+#logo_admin a h1 {
+    text-indent: -9999px;
+    height: 126px;
+    width: 246px;
+}
+
+#logo a h1 {
+    text-indent: -9999px;
+    height: 126px;
+    width: 246px;
+}
+
+#top-nav {
+    font-size: 1.2em;
+    text-align: right;
+}
+
+a#login_session {
+    display: inline;
+}
+a#logout_session {
+    display: none;
+}
+
+#follow_twitter{padding-left: 15px;display: inline;position: absolute;margin-top: 0.6em;}
+#mailing_list_h3{margin-bottom: 0;}
+
+/*--------------------------------------------*/
+/* FOOTER */
+/*--------------------------------------------*/
+
+#footer {
+    margin-top: 50px;
+    border-top: 3px solid #9E2020; /* logo red */
+    background-color: #ffffcc;
+    text-align: center;
+}
+#footer a {
+    color: black;
+}
+
+
+/*--------------------------------------------*/
+/* Terms and Privacy */
+/*--------------------------------------------*/
+
+div.terms {
+    height: 300px;
+    overflow: scroll;
+}
+
+div.privacy {
+    height: 300px;
+    overflow: scroll;
+}
+
+div.accept_terms {
+    margin-top: 24px;
+
+}
+div.accept_terms .accept,
+div.accept_terms .reject {
+    text-align:center;
+}
+
+div.accept_terms .accept a,
+div.accept_terms .reject a {
+    color: black;
+    background-color: #FABF8F;
+    padding: 1em 2em 1em 2em;
+    border: 1px solid #999;
+}
+
+/* new post - subscribe */
+
+/*--------------------------------------------*/
+/* INTRO - NEED A JOB, NEED A PROGRAMER */
+/*--------------------------------------------*/
+
+
+#intro-box {
+    padding-bottom: 10px;
+}
+#intro-box h2 {
+    font-size: 1.8em;
+    margin-bottom:0.2em;
+}
+
+#intro p,
+#needadev p,
+#subscribe p {
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+#intro a,
+#subscribe a,
+#needadev a {
+}
+
+#intro-button-line a {
+    float: right;
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+}
+
+#subscribe  {
+    text-align: left;
+    padding-top: 10px;
+
+}
+
+#subscribe h2 {
+    margin-bottom: 0px;
+    font-size:1.8em;
+}
+
+
+
+/* Search box */
+#latest-jobs h1 {
+    margin: 0px;
+    font-size: 2em;
+
+}
+#latest-jobs h1 span {
+    font-size: 0.5em;
+}
+
+#search-box {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+#rss {
+    line-height: 60px;
+}
+#rss a {
+    float: right;
+}
+
+/* new job button */
+
+.new-job {
+/* line-height: 60px; */
+}
+.new-job a {
+    color: black;
+    background-color: #FABF8F;
+    padding: 1em 2em 1em 2em;
+    border: 1px solid #999;
+}
+
+.legend-new-job{
+  float: right;
+  padding: 1em 0.7em 1em 2em;
+}
+
+
+.new-job-alt {
+/* line-height: 60px; */
+    width: 180px;
+    height: 17px;
+    padding: 1em 2em 1em 3em;
+    margin: 0px;
+    background-color: #FABF8F;
+    border: 1px solid #999;
+    float: right;
+}
+.new-job-alt a {
+    color: black;
+/*    padding: 1em 2em 1em 2em;    */
+
+}
+
+
+
+
+/*--------------------------------------------*/
+/* learn more button */
+/*--------------------------------------------*/
+
+.learn-more a {
+    color: black;
+    background-color: #FABF8F;
+    padding: 1em 2em 1em 2em;
+    border: 1px solid #999;
+}
+
+/* Job lists */
+
+#jobs-list ul {
+    list-style-type: none;
+}
+#jobs-list ul.jobs {
+    padding: 0px;
+    margin: 0px;
+}
+
+#jobs-list ul li {
+    border-bottom: 1px solid #999;
+    padding: 10px;
+    color: gray;
+}
+
+#jobs-list div.title {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom:2px;
+}
+
+#jobs-list div.description {
+    font-size: 1.25em;
+    color: gray;
+    margin-bottom:5px;
+}
+
+#jobs-list div.company {
+    font-size: .85em;
+    color: gray;
+}
+
+#jobs-list div.location {
+    font-size: 1.25em;
+}
+
+#jobs-list div.date {
+    float:right;
+    font-size: 0.65em;
+}
+
+
+#jobs-list h3 {
+    font-size: 1.5em;
+    margin-bottom: 0px;
+}
+#jobs-list h3 span {
+    color: gray;
+}
+#jobs-list h3 span.date {
+    float:right;
+    font-size: 0.75em;
+}
+
+#whyrubynow ul li {
+    font-size: 1.15em;
+}
+/* Premium Job Style */
+
+#featured{
+    background: #ffffcc; /* yellow */
+    position: absolute;
+    top:0px;
+    right: 20px;
+    padding: 10px;
+}
+
+.featured {
+/* background: #FFF6BF; */
+/* color: #817134; */
+/* border-color: #FFD324; */
+}
+
+.l1 {
+}
+
+.l2 {
+    background: #FFF6BF;
+    color: #817134;
+    border-color: #FFD324;
+}
+
+
+/*--------------------------------------------*/
+/* HOWTO */
+/*--------------------------------------------*/
+
+#howto {  
+    padding-top:20px;
+}
+
+#reasons h1 {
+    font-size:32px;
+}
+
+#howto ol li{
+    font-size:18px;
+    font-weight: bold;
+    margin-bottom:1.5em;
+    margin-left: 10px;
+}
+
+#howto ul li {
+    font-size:16px;
+    font-weight: normal;
+    margin-bottom:0.25em;
+}
+
+#howto li.highlight {
+    background: #ffffcc;
+}
+
+
+/*--------------------------------------------*/
+/* Article */
+/*--------------------------------------------*/
+#article {
+    font-size:14px;
+}
+
+#article ol {
+    margin-left:25px;
+}
+
+#article ul {
+    margin-left:25px;
+}
+
+
+#article ol li {
+    font-weight: normal;
+    line-height: normal;
+    margin-bottom: 2px;
+}
+
+#article h2, #article h3, #article h4{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+#article div.dev-concerns ol {
+    margin-left:25px;
+
+}
+
+/*--------------------------------------------*/
+/* NEW JOB */
+/*--------------------------------------------*/
+
+#premium_select div.platinum_text ul {
+    float: left;
+    width: 50%;
+}
+
+#premium_select div.platinum_text img,
+#premium_select div.platinum_text span,
+{
+    float: right;
+}
+
+#premium_select div.platinum_text span {
+    color: #9E2020;             /*logo red*/
+    font-weight: bold;
+    width: 50%;
+    font-size: 1.2em;
+    padding-left: 130px;
+}
+
+
+/*--------------------------------------------*/
+/* Feedback */
+/*--------------------------------------------*/
+
+
+#recaptcha_area {
+    padding-left: 25%;
+}
+
+
+/*--------------------------------------------*/
+/* ADMINISTRATOR */
+/*--------------------------------------------*/
+
+#admin-job-list {
+    font-size: 11px;
+
+}
+
+/*--------------------------------------------*/
+/* Flash notices error messages */
+/*--------------------------------------------*/
+
+/* Success, error & notice boxes for messages and errors. */
+div.error, div.notice, div.success,
+#flash_failure, #flash_success, #flash_notice {
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 1em;
+    padding: 0.8em; }
+
+div.error,
+#flash_failure {
+    background: #FBE3E4;
+    border-color: #FBC2C4;
+    color: #D12F19; }
+
+div.error a,
+#flash_failure a {
+    color: #D12F19; }
+
+div.notice,
+#flash_notice {
+    background: #FFF6BF;
+    border-color: #FFD324;
+    color: #817134; }
+
+div.notice a,
+#flash_notice a {
+    color: #817134; }
+
+div.success,
+#flash_success {
+    background: #E6EFC2;
+    border-color: #C6D880;
+    color: #529214; }
+
+div.success a,
+#flash_success a {
+    color: #529214; }
+
+/*--------------------------------------------*/
+/* ERRORS */
+/*--------------------------------------------*/
+
+.fieldWithErrors {
+    background: #FBE3E4;
+    border-color: #FBC2C4;
+    color: #D12F19;
+}
+
+.field_with_errors input,
+.field_with_errors textarea {
+    border-color: #FBC2C4;
+}
+
+tbody tr.error td {
+    background: #FBE3E4;
+}
+
+/*--------------------------------------------*/
+/* Job conversion steps */
+/*--------------------------------------------*/
+
+#steps {}
+
+#steps a.btn {
+    color: black;
+    background-color: #FABF8F;
+    padding: 1em 2em 1em 2em;
+    border: 1px solid #999;
+}
+
+#steps a.big {
+    font-size: 1.2em;
+}
+
+#steps .next-step {
+    text-align: right;
+}
+#steps .prev-step {
+    text-align: left;
+}
+
+
+
+/*--------------------------------------------*/
+/* login form */
+/*--------------------------------------------*/
+
+#steps #account {
+    display: none;
+}
+
+/*--------------------------------------------*/
+/* create account form */
+/*--------------------------------------------*/
+
+div.ui-dialog form#new_account input.error {
+    border: 1px solid #8A1F11;
+    background: none repeat scroll 0 0 #FBE3E4;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+div.ui-dialog form#new_account label.error {
+    background: none;
+    border: 0;
+    color: #8A1F11;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+
+/*--------------------------------------------*/
+/* Step 1 */
+/*--------------------------------------------*/
+
+#step-1 hide {
+    display: none;
+}
+
+#step-1 ul {
+    list-style: disc;
+}
+#step-1 div.better {
+    /* padding-top: 50px; */
+    text-align: center;
+}
+
+#step-1 .formtastic .fragments .label, .formtastic .choices .label {
+    left: 0;
+    position: relative;
+    width: 95%;
+}
+
+#step-1 legend {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#step-1 #job_headline {
+    width: 470px;
+}
+
+#step-1 #job-where input[type="text"],
+#step-1 #job-where select
+{
+    float: left;
+    margin-right: 10px;
+    width: 230px;
+
+}
+
+
+#step-1 .row {
+    min-height: 90px;
+}
+
+#step-1 span.hint,
+#step-2 span.hint {
+    color: #AAA;
+    margin-left: 10px;
+}
+
+#step-1 p.current-user {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+}
+#step-1 p.current-user span {
+    color: #DA7B32;
+}
+
+#step-1 input[type="submit"].button,
+#step-2 input[type="submit"].button,
+#step-3 input[type="submit"].button,
+#step-3 a.button {
+    cursor:pointer;
+    border:outset 1px #999;
+    border: 1px solid #999;
+}
+
+/*--------------------------------------------*/
+/* Step 1 - Tier selection */
+/*--------------------------------------------*/
+
+#step-1 div.tier-options {
+    font-size: 1.1em;
+}
+#step-1 div.tier-options h2 {
+    font-size: 1.7em;
+}
+
+#step-1 div#why li {
+    font-size:1.2em;
+}
+
+#step-1 div#why ol {
+    margin-bottom: 2px;
+}
+
+#step-1 div#more-link {
+    font-size:1.5em;
+}
+
+#step-1 div#why p span {
+    color: #9E2021; /* red logo */
+    font-weight: bold;
+}
+
+/* tier boxes */
+#step-1 div.tier-box {
+    font-size: 1.2em;
+}
+#step-1 div.tier-box div.header {
+    padding: 5px;
+    margin-bottom: 5px;
+    color: white;
+}
+#step-1 div.tier-box h3 {
+    margin-bottom: 0;
+    color: white;
+    font-size: 2em;
+}
+#step-1 div.tier-box p {
+    margin: 0;
+    padding: 0.6em;
+}
+#step-1 div.tier-box p.middle {
+    border-bottom: 1px dashed gray;
+}
+#step-1 div.tier-box p span {
+    color: gray;
+    font-size: 0.8em;
+}
+
+#step-1 div.tier-box p.footer  {
+    padding-top: 1em;
+}
+
+#step-1 div.tier-box p.footer label.label-radio,
+#step-1 div.tier-box p.footer label.label-radio-check  {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+/* combo box */
+
+
+#step-1 div#combo div.tier-box {
+    background: url("../images/platinum_bg.png") bottom left;
+    border: 1px solid #9E2021; /* red logo */
+}
+#step-1 div#combo div.header {
+    background: #9E2021; /* red logo */
+    font-size: 0.5em;
+
+}
+#step-1 div#combo p.footer {
+    border-top: 1px solid #9E2021;
+}
+#step-1 div#combo p.footer span {
+    color: #9E2021;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#step-1 div#combo li{
+  font-size: 0.8em;
+}
+
+
+/* platimum box */
+
+#step-1 div#platinum div.tier-box {
+    background: url("../images/platinum_bg2.png") bottom left;
+    border: 1px solid #9E2021; /* red logo */
+}
+#step-1 div#platinum div.header {
+    background: #9E2021; /* red logo */
+
+}
+#step-1 div#platinum p.footer {
+    border-top: 1px solid #9E2021;
+}
+#step-1 div#platinum p.footer span {
+    color: #9E2021;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* premium box */
+#step-1 div#premium div.tier-box {
+    background: url("../images/premium_bg2.png");
+    border: 1px solid gray;
+}
+#step-1 div#premium div.header {
+    background: #CCCCCC;
+    color: white;
+}
+#step-1 div#premium div.header span {
+    color: gray;
+}
+#step-1 div#premium p.footer {
+    border-top: 1px solid gray;
+}
+#step-1 div#premium p.footer span {
+    color: black;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* radio buttons */
+
+#step-1 div.tier-options .label-radio {
+    padding-left: 104px;
+    background: url("../images/select.png") no-repeat;
+}
+#step-1 div.tier-options .label-radio-check {
+    padding-left: 104px;
+    background: url("../images/selected.png") no-repeat;
+}
+
+#step-1 div.tier-options  p.footer label.label-radio input,
+#step-1 div.tier-options  p.footer label.label-radio-check input {
+    position: absolute;
+    left: -9999px;
+}
+
+
+
+/*--------------------------------------------*/
+/* Step 2 */
+/*--------------------------------------------*/
+
+#step-2 input[type="text"]#job_headline {
+    font-size: 2em;
+    border: 1px solid #DDD;
+}
+
+#step-2 textarea,
+#step-2 input[type="text"]#job_headline {
+    width: 800px;
+}
+#step-2 #job_instructions {
+    height: 100px;
+}
+
+/*--------------------------------------------*/
+/* Step 4 */
+/*--------------------------------------------*/
+
+#cvv_note_title {
+    color: #9E2021;
+    font-weight: bold;
+    font-size: 1em;
+}
+#cvv_note_content{
+    font-style: italic;
+    font-size: 1em;
+}
+
+/*--------------------------------------------*/
+/* Job page */
+/*--------------------------------------------*/
+
+div#sidebar{
+    margin-left: -1px;
+}
+
+div#job div#sidebar {
+    text-align: left;
+}
+
+div#job div#sidebar span{
+    text-align: right;
+}
+
+tbody tr.error td {    
+    background: #FBE3E4;
+}
+
+
+#create_new_account {
+    color: #9E2021;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+#coupon_field {
+   margin-right: 30px;
+   padding: 10px;
+}
+.coupon {
+   margin: 10px;
+   padding: 3px;
+   text-align: center;
+   width: 55%;
+}
+div#job_information_left{
+    float: left;
+    width: 55%;
+    display: inline;
+}
+div#job_information_right{
+    float: right;
+    display: inline;
+    width: 40%;
+}
+
+/*form.cmxform label.error, label.error {
+	 remove the next line when you have trouble in IE6 with labels in list 
+	color: red;
+	font-style: italic
+}*/
+/*div.error { display: none; }*/
+
+.block { display: block; }
+/*form.cmxform label.error { display: none; }*/
+
+#newAccountForm label{
+  width:600px;
+}
+
+#maintenance_message{
+    padding: 50px;
+    padding-top: 150px;
+    font-size: 16px;
+    min-height: 200px;
+}
+#maintenance_message #text_content{
+    display: inline-table;
+    padding-left: 10px;
+}
+
+
+a.actions_credit_card, a.actions_credit_card:visited, a.actions_credit_card:hover{
+  color: #D12F19;
+}
+
+.summary_transaction {
+	border: 1px solid #686868;
+	padding: 5px;
+	background-color: #FFC;
+}
+.summary_transaction .title {
+	text-align: right;
+	font-size: 1.2em;
+	 font-weight: bold;
+}
+
+.summary_transaction_text{
+	padding-top: 1.0em !important;
+	margin-top: 1.0em !important;
+}
+#job_price_coupon{
+    display: none;
+}
+
+
+.button, a.button{
+   border-top: 1px solid #d95656;
+   background: #880007;
+   background: -webkit-gradient(linear, left top, left bottom, from(#c5010b), to(#880007));
+   background: -webkit-linear-gradient(top, #c5010b, #880007);
+   background: -moz-linear-gradient(top, #c5010b, #880007);
+   background: -ms-linear-gradient(top, #c5010b, #880007);
+   background: -o-linear-gradient(top, #c5010b, #880007);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ffffff;
+   font-size: 16px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #c50107;
+   background: #c50107;
+   color: #ffffff;
+   }
+.button:active {
+   border-top-color: #c50107;
+   background: #c50107;
+   }
+.button-green {
+   border-top: 1px solid #40C501;
+   background: #40C501;
+   background: -webkit-gradient(linear, left top, left bottom, from(#40C501), to(#00881B));
+   background: -webkit-linear-gradient(top, #40C501, #00881B);
+   background: -moz-linear-gradient(top, #40C501, #00881B);
+   background: -ms-linear-gradient(top, #40C501, #00881B);
+   background: -o-linear-gradient(top, #40C501, #00881B);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ffffff;
+   font-size: 16px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+}
+.button-green:hover {
+   border-top-color: #40C501;
+   background: #40C501;
+   color: #ffffff;
+   }
+.button-green:active {
+   border-top-color: #40C501;
+   background: #40C501;
+   }
+
+
+div#info{
+    font-size: 16px;
+}

@@ -1,0 +1,32 @@
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages' %>
+  
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+ <%= f.label :password %>
+      <%= f.password_field :password %>
+</div>
+  <div class="field">
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+</div>
+
+ <div class="field">        
+      <%= check_box_tag "user[terms]", 1 %>
+      <%= f.label :terms do %>
+       I agree to the <%= link_to "Terms for Use",termsofuse_path %> and <%= link_to "Privacy Policy", privacypolicy_path %>
+      <% end %>
+     
+</div>
+
+  <div class="actions">
+    <%= f.submit "Create your account", class:"button inline" %>
+  </div>
+<% end %>
