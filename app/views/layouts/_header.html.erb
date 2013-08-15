@@ -17,6 +17,7 @@
 		              <%= link_to "Expert Advice",    expertadvice_path %>
 		              
 		              <%= link_to "RSS",    '#' %>
+		              <% #raise signed_in?.inspect %>
 		              <% if signed_in? %>
 		              		<%= link_to "Account", dashboard_path %>
 		              		<%= link_to "Sign out", signout_path %>

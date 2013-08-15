@@ -22,5 +22,5 @@ class Jobpost < ActiveRecord::Base
   validates :country_id, presence: true
   validates :user_id, presence: true
 
-  default_scope order: 'microposts.created_at DESC'
+  default_scope order: 'jobposts.created_at DESC'
 end

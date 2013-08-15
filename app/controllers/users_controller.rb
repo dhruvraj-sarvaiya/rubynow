@@ -87,8 +87,9 @@ class UsersController < ApplicationController
   end
 
   def dashboard
+    
     @user ||= User.find_by_remember_token(cookies[:remember_token])
-    @jobpost = @user.jobposts.paginate(page: params[:page])
+    @jobposts = @user.jobposts.paginate(page: params[:page])
   end
 
   private
