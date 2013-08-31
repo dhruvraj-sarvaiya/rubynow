@@ -25,13 +25,63 @@
   <%= @jobpost.user_id %>
 </p>
 
-<% if @user.jobpost.any? %>
-      <h3>Job Posts (<%= @user.jobpost.count %>)</h3>
-      <ol class="jobposts">
-        <%= render @jobpost %>
-      </ol>
-      <%= will_paginate @jobpost %>
-    <% end %>
+<% #raise @country[2].inspect %>
+  <div class="intro span-24 last">
+    <h2>Step 3: Preview your ad</h2>
+    <hr>
+  </div>
+  <div class="span-24 last">
+    <h2 id="headline"><% @jobpost.post_title %>
+      <span style="color:gray;">at</span> 
+      
+      <%= link_to @jobpost_detail.company,    @jobpost_detail.company_url %>
+    </h2>
+    <h3 id="location"><%= @jobpost.city_state %>, <%=  @country[@jobpost.country_id].to_s %></h3>
+  </div>
+  <div id="info" class="span-18 borderwithoutcolor">
+    <p id="description">
+      <%= @jobpost_detail.description.to_s %></p>
+    <br>
+    <h4>How to apply?</h4>
+      <%= @jobpost_detail.how_to_apply %>
+      
+    <p><br>
+      <strong>Type of position:</strong> 
+      <% if !!(@jobpost_detail.type_of_position.nil?  || @jobpost_detail.type_of_position == 1 )%>  
+        Contractor 
+      <% else %>
+        Permanent 
+      <% end %>  
+
+      <br>
+      <strong>Work hours:</strong> <% if !!(@jobpost_detail.work_hours.nil?  || @jobpost_detail.work_hours == 1 )%>  
+        Full Time  
+      <% else %>
+        Part Time  
+      <% end %> 
+    </p>
+  </div>
+  <!--
+  <div id="sidbar" class="span-5 last" style="font-size: 1.5em; color: gray;"/>
+    <em>Here we will show developers ways to share your job on Facebook, Twitter, Google+ and more.</em>
+  </div>
+ -->
+   <hr class="space">
+  <div class="step-nav span-24 last">
+    <div class="prev-step column span-12">
+      <a href="/post/jobs/6277/edit" class="button" id="back-to-step-2">&lt;&lt; Go back and edit</a>
+    </div>
+    <div class="next-step column span-12 last">
+     
+        <input class="button" id="job_submit" name="commit" value="Payment >>" type="submit">
+    </div>
+  </div>
+
+
+    <input id="job_step" name="job[step]" value="2" type="hidden">
+
+
+
 
 <%= link_to 'Edit', edit_jobpost_path(@jobpost) %> |
 <%= link_to 'Back', jobposts_path %>

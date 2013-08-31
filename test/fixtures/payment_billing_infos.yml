@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  payment_id: 1
+  first_name: MyString
+  last_name: MyString
+  add_1: MyString
+  add_2: MyString
+  state: MyString
+  country_id: 1
+  city: MyString
+  zip: MyString
+  phone: MyString
+
+two:
+  payment_id: 1
+  first_name: MyString
+  last_name: MyString
+  add_1: MyString
+  add_2: MyString
+  state: MyString
+  country_id: 1
+  city: MyString
+  zip: MyString
+  phone: MyString

@@ -2,20 +2,33 @@ JobsRubynow::Application.routes.draw do
    resources :jobposts
    resources :users
    resources :sessions, only: [:new, :create, :destroy]
+
+  #current_cart 'cart', :controller => 'carts', :action => 'show', :id => 'current'
+  resources :line_items
+  resources :carts
+  resources :products
+  resources :categories
+  resources :payments #, :collection => { :credit_card => :get }
+  
+
+  #  resources :jobposts do
+  #   collection do
+  #     get :edit_jobpostdetail
+  #     put :update_jobpostdetail
+  #   end
+  # end
+
+  resources :jobposts do
+  get 'edit_jobpostdetail', :on => :member
+  put 'update_jobpostdetail', :on => :member
+end
   #get "static_pages/home"
-
   # get "static_pages/whyrubynow"
-
   # get "static_pages/rubyguides"
-
   # get "static_pages/expertadvice"
-
   # get "static_pages/privacypolicy"
-
   # get "static_pages/termsofuse"
-
   #get "static_pages/contactus"
-
   #match '/', to: 'static_pages#home'
   root  :to =>'static_pages#home'
 
@@ -38,7 +51,16 @@ JobsRubynow::Application.routes.draw do
 
    match '/dashboard' => 'users#dashboard'
    match '/edit' => 'users#edit'
+   match '/editjobpostdetail' => 'jobposts#edit_jobpostdetail'
+   match '/previewjobpost' => 'jobposts#show'
+   #match '/jobpostsedit' => 'jobposts#edit'
 
+   match '/current_cart' => 'carts#show'
+
+   match '/sellect_payment' => 'payments#sellect_payment'
+   # get "payments/credit_card"
+   match '/credit_card' => 'payments#credit_card'
+   match '/credit_card_confirm' => 'payments#credit_card_confirm'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

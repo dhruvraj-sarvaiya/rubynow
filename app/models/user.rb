@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation,:terms
   has_secure_password
   has_many :jobposts, dependent: :destroy
+  has_many :usermemberships, dependent: :destroy
+  #has_one :jobpost_details, through: :jobposts
 
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
@@ -26,6 +28,10 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true   
   #validates :terms, presence:true  
   validates :terms, :acceptance => true, :presence =>{:message => ": You must agree terms for use and privacy policy to preceed"}
+
+   def User.new_remember_token
+    SecureRandom.urlsafe_base64
+  end
 
   private
 

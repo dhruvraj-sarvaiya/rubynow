@@ -1,6 +1,20 @@
-<li>
+<!-- <li>
   <span class="content"><%= jobpost.post_title %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(jobpost.created_at) %> ago.(<%= jobpost.created_at.strftime("%a %b %d %Y  %H:%M:%S") %>)
   </span>
-</li>
+</li> -->
+
+<tr>
+  <td><%= jobpost.id %></td>
+  <td><%= link_to jobpost.post_title, jobpost_path(jobpost) %>
+  	
+  </td>
+  <td>Premium</td>
+  <td>No</td>
+  <td align="center">No</td>
+  <td align="center">No</td>
+  <td><span>Sun Aug 11 2013 13:51:29</span></td>
+  <td><%= link_to 'edit / pay', edit_jobpost_path(jobpost) %></a></td>
+  <td><%= link_to "delete", jobpost, method: :delete, data: { confirm: "You sure?" } %></td>
+</tr>

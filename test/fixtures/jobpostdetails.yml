@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  company: MyString
+  company_url: MyString
+  description: MyString
+  type_of_position: 1
+  work_hours: 1
+  how_to_apply: MyString
+  jobpost_id: 1
+
+two:
+  company: MyString
+  company_url: MyString
+  description: MyString
+  type_of_position: 1
+  work_hours: 1
+  how_to_apply: MyString
+  jobpost_id: 1

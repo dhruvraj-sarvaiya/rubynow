@@ -1,48 +1,309 @@
-<%= form_for(@jobpost) do |f| %>
-  <% if @jobpost.errors.any? %>
+<%= form_for @jobpost ,:html => { :class => "form_step", :id => "form_step_2"} do |f| %>
+  <div style="margin:0;padding:0;display:inline">
+    <input name="utf8" value="✓" type="hidden">
+    <input name="_method" value="put" type="hidden">
+    <input name="authenticity_token" value="2dznntswhz6dZxkQy7xmHF8ifFxzYSJglVtZVZ0vsLw=" type="hidden">
+  </div>
+  <div style="display: block;" id="step-1" class="span-24 last hide">
+    <div class="tier-options span-24 last">
+      <div class="span-18">
+        <h1>Why Post to RubyNow?</h1>
+        <br>
+        <div class="span-18">
+          <div class="span-3"> <img alt="Icon-03" src="/assets/icon-03.png?1373659231" style="width:60%; float: center; margin-top:5px;"> </div>
+          <div class="span-13">
+            <h3><b>1. A Big Megaphone (Email, Twitter, Facebook &amp; RSS)</b></h3>
+            <p>Every rubynow post includes an e-mail sent directly to all opt-in ruby developers on our notification list. We also send out alerts to our Twitter, RSS, and Facebook feeds.</p>
+          </div>
+        </div>
+        <div class="span-18">
+          <div class="span-3"> <img alt="Icon-04" src="/assets/icon-04.png?1373659231" style="width:60%; float: center; margin-top:5px;"> </div>
+          <div class="span-13">
+            <h3><b>2. Trusted by Industry Leaders, Trusted by You</b></h3>
+            <p>Since 2005, we’ve listed over 5,370+ ruby jobs from industry leaders including New Relic, Pivotal Labs, Mashable, Hashrocket, and Zendesk. </p>
+          </div>
+        </div>
+        <div class="span-18">
+          <div class="span-3"> <img alt="Icon-05" src="/assets/icon-05.png?1373659231" style="width:60%; float: center; margin-top:5px;"> </div>
+          <div class="span-13">
+            <h3><b>3. Strong RubyNow Community since 2005</b></h3>
+            <p>Built over 8 years, 2,500+ Rails developers have opted to get direct email notifications. That's a lot of eye-balls and a great mix of experience reviewing your job post. </p>
+          </div>
+        </div>
+        <div class="span-18">
+          <div class="span-3"> <img alt="Icon-02" src="/assets/icon-02.png?1373659231" style="width:60%; float: center; margin-top:5px;"> </div>
+          <div class="span-13">
+            <h3><b>4. Expert Advice from Steve Robinson PhD</b></h3>
+            <p>With a premium post, you get a 30-minute consultation with <a href="http://jobs.rubynow.com/get-expert-rails-recruitment-advice">Steve</a>, founder of a top recruitment firm and active developer for the past 15 years. </p>
+          </div>
+        </div>
+        <div class="span-18">
+          <div class="span-3"> <img alt="Icon-06" src="/assets/icon-06.png?1373659231" style="width:60%; float: center; margin-top:5px;"> </div>
+          <div class="span-13">
+            <h3><b>5. We're Happy When You Are</b></h3>
+            <p>Money Back Guarantee If you don't feel your ad was effective, we'll work with you to repost, recompose or return your money.</p>
+          </div>
+        </div>
+      </div>
+      <div class="span-6 last">
+        <h2>Recent Testimonials</h2>
+        <table border="0">
+          <tbody>
+            <tr>
+              <td colspan="2"><img alt="phishme logo" src="/assets/phishme_logo.jpeg?1373659231" style="width:100%; float: center; margin-top:0px;"></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="background:#ffffff">"We've tried a different mix of job boards, and RubyNow consistently delivers solid applicants.  It's one of the few job boards that we keep coming back to when it's time to grow our team."<br>
+                <strong>Doug Hagen - Director of Engineering, Phishme.com</strong></td>
+            </tr>
+            <tr>
+              <td colspan="2"><br></td>
+            </tr>
+            <tr>
+              <td style="background:#ffffff"><img alt="redfivestudios logo" src="/assets/redfivestudios_logo.jpeg?1373659231" style="width:40px; float: center; margin-top:0px;"></td>
+              <td style="background:#ffffff">"We received multiple replies from qualified candidates and are moving forward with one of them this week." </td>
+            </tr>
+            <tr>
+              <td colspan="2"><strong>Jeff Lawniczak - Director of Talent Acquisition. Red 5 Studios</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr>
+      <br>
+      <div id="why" class="span-7 append-1 colborder" style="font-size:1em;">
+        <h2>Posting Next Steps</h2>
+        <p>If you have any questions please reach out on +1 (203) 200-7119 and we'd be happy to answer them.</p>
+        <p>If you are ready to get started here's the next steps to getting your post out ...</p>
+        <p> </p>
+        <p></p>
+        <ul>
+          <li>Select the post type</li>
+          <li>Fill out the job post</li>
+          <li>Get advice (Premium Only)</li>
+          <li>Job emailed directly to developers</li>
+          <li>Job live on the website</li>
+          <li>Start receiving applications.</li>
+        </ul>
+        <p></p>
+        <p>Let's get started ...</p>
+      </div>
+      <div class="span-15 last">
+        <h2>Step 1: Pick your Post Type</h2>
+        <div id="platinum" class="span-7 append-1">
+          <div class="tier-box">
+            <div class="header">
+              <h3 class="title">Premium</h3>
+              Better and faster results </div>
+            <p class="middle"> Expert Advice Session with Steve </p>
+            <p class="middle"> Pin your post to the top of the board for 7
+              days </p>
+            <p class="middle"> Highlight your post in bright yellow </p>
+            <p class="middle"> Directly email your post to each developer on our opt-in list<br>
+              <span> (opt-in list has been built up over 8 years)</span> </p>
+            <p class="end"> Post a job for <b>45</b> days </p>
+            <p class="footer">
+              <% if !!(@jobpost.post_type.nil?  || @jobpost.post_type == 2 )%>                
+              <label class="label-radio label-radio-check" for="jobpost_post_type_2">
+              <% else %>
+              <label class="label-radio" for="jobpost_post_type_2">
+              <% end %>
+              <!-- <input checked="checked" class="featured_status" id="job_featured_status_2" name="job[featured_status]" value="2" type="radio"> -->
+              <%= radio_button_tag("jobpost[post_type]", "2", !!(@jobpost.post_type.nil? || @jobpost.post_type == 2),:class => "job_featured_status") %>
+              <strike>$295</strike> <span>$</span><span id="job_premium_a_amount">195</span> (thu 7/31) </label>
+            </p>
+          </div>
+          <!-- end - box -->
+        </div>
+        <!-- end - platinum -->
+        <div id="premium" class="span-7 last">
+          <div class="tier-box">
+            <div class="header">
+              <h3>Standard</h3>
+              <span>Early stage startups</span> </div>
+            <p class="middle"> Directly email your post to each developer on our opt-in list<br>
+              <span> (opt-in list has been built up over 8 years)</span> </p>
+            <p class="end"> Post a job for <b>45</b> days </p>
+            <p class="footer">
+              <% if !!(@jobpost.post_type.nil?  || @jobpost.post_type == 1 )%>                
+              <label class="label-radio label-radio-check" for="jobpost_post_type_1">
+              <% else %>
+              <label class="label-radio" for="jobpost_post_type_1">
+              <% end %>
+              <!-- <input class="featured_status" id="job_featured_status_1" name="job[featured_status]" value="1" type="radio"> -->
+              <%= radio_button_tag("jobpost[post_type]", "1", !!(@jobpost.post_type.nil? || @jobpost.post_type == 1), :class => "job_featured_status") %>
+              <strike>$149</strike> <span>$</span><span id="job_premium_b_amount">99</span> (thu 7/31) </label>
+            </p>
+          </div>
+          <!-- end - box -->
+        </div>
+      </div>
+    </div>
+    <!-- render form here -->
+    <% if @jobpost.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@jobpost.errors.count, "error") %> prohibited this jobpost from being saved:</h2>
-
       <ul>
-      <% @jobpost.errors.full_messages.each do |msg| %>
+        <% @jobpost.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
+    <% end %>
+    <hr class="space">
+    <div id="get-started" class="span-24 last jobpost-form-step-1">
+      <div class="intro span-24 last">
+        <h2>Step 2: Get Started:</h2>
+        <hr>
+      </div>
+      <!-- errors -->
+      <!-- left column -->
+      <div class="span-12 " name="step-1-fields-section">
+        <div class="span-12 last"> <strong>Your Post title *</strong><span class="hint">(make this interesting, you'll get better results!)</span> <%= f.text_field :post_title, :class=>"required valid", :size=>"50", :title=>"Please enter a Post Title" %> </div>
+        <div id="job-where" class="span-12 last">
+          <div class="span-6"> <%= f.label :city_state do%> <strong>Where? *</strong><span class="hint">(City / State)</span>
+            <% end %>
+            <%= f.text_field :city_state, :class=>"required valid", :size=>"22", :title=>"Please enter a City/State"  %> </div>
+          <div class="span-6 last"> <%= f.label :country_id %> <%= f.select :country_id, options_for_select(@country.collect{ |c| [c, @country.index(c)]},@jobpost.country_id) %> </div>
+        </div>
+         <div class="span-12 last">
+          <%= hidden_field_tag("jobpost[is_full_telecommute_job]", "0") %>
+          <%= check_box_tag "jobpost[is_full_telecommute_job]", 1 %>
+          <%= f.label :terms do %>
+            This is a full telecommute job
+          <% end %>
+          
+      <!--   <input name="job[telecomute]" value="0" type="hidden">
+        <input hint="Check here if this is a telecommute job" id="job_telecomute" label="Telecommute:" name="job[telecomute]" value="1" type="checkbox">
+        <label for="job_telecomute">This is a full telecommute job</label> -->
+        <hr class="space">
+
+      </div>
+        <div class="span-12 last"> <%= f.label :referrer_code %> <%= f.text_field :referrer_code, :size=>"40" %> </div>
+      </div>
+      <!-- right column -->
+      <div class="span-11 prepend-1 last">
+        <% if signed_in? %>
+        <p class="current-user">Logged in
+          as: <span><%= @user.email %></span></p>
+        <% else %>
+        <div class="span-11 last">
+          <p>
+            <input checked="checked" id="job_account_options_1" name="job[account_options]" value="1" type="radio">
+            <label for="job_account_options">I have an account, log me in please.</label>
+            <input id="job_account_options_2" name="job[account_options]" value="2" type="radio">
+            <label for="job_account_options">I'm new in the site, create a new account</label>
+          </p>
+        </div>
+        <div id="loginForm" style="display:  block ">
+          <label for="user_login">Login:</label>
+          <input id="user_login" name="user[login]" size="45" value="" type="text">
+          <br>
+          <label for="user_password">Password:</label>
+          <input id="user_password" name="user[password]" size="45" value="" type="password">
+          <br>
+          <a href="http://jobs.rubynow.com/password_reset_request/new">Forgot your password?</a> </div>
+        <div title="Account login" id="newAccountForm" style="display:  none "> <br>
+          <br>
+          <label for="new_user_name">Name:</label>
+          <input id="new_user_name" name="new_user[name]" size="45" type="text">
+          <br>
+          <label for="new_user_login">Email:</label>
+          <input id="new_user_login" name="new_user[login]" size="45" type="text">
+          <br>
+          <label for="new_user_password">Choose password:</label>
+          <input id="new_user_password" name="new_user[password]" size="45" type="password">
+          <br>
+          <label for="new_user_password_confirmation">Confirm password:</label>
+          <input id="new_user_password_confirmation" name="new_user[password_confirmation]" size="45" type="password">
+          <br>
+          <label for="new_user_terms">
+          <input validate="required:true" id="new_user_terms" name="new_user[terms]" value="1" type="checkbox">
+          I agree to the <a href="/terms" target="_blank">Terms for Use</a> and <a href="/privacy" target="_blank">Privacy Policy</a> </label>
+          <br>
+        </div>
+        <% end %>
+      </div>
+      <div style="display: none;" class="span-23 errorForsteps"> </div>
+      <!-- end - right column -->
+      <div class="step-nav span-24 last">
+        <div class="next-step last"> <%= f.submit "Go Step 2 >>", :class => "button" %> </div>
+      </div>
+    </div>
+    <%= link_to 'Back', jobposts_path %> </div>
+  <!-- Step 2 -->
+  <div style="display: none;" id="step-2" class="span-24 last">
+    <div class="intro span-24 last">
+      <h2>Step 2: Enter the job Details</h2>
+      <hr>
+    </div>
+    <!-- errors -->
+    <div style="display: none;" class="span-20 errorForsteps"> </div>
+    <div class="span-24 last">
+      <input class="required" id="job_headline" name="job[headline]" size="50" value="sample job post" type="text">
+      <h3 id="location">ahmedabad, India</h3>
+      <div class="span-24 borderwithoutcolor">
+        <div class="span-9"> <strong>Company: *</strong><br>
+          <input class="required valid" id="job_company_name" name="job[company_name]" size="33" value="sample company" type="text">
+        </div>
+        <div class="span-9 last"> <strong>Company URL: *</strong><span class="hint">(start with http://)</span><br>
+          <input class="valid" id="job_url" name="job[url]" size="33" value="http://sample-website.com" type="text">
+        </div>
+        <div class="span-21 last">
+          <hr class="space">
+          <strong>Enter the job description: *</strong>
+          <div class="markdown">
+            <div id="markItUpJob_description" class="markItUp">
+              <div class="markItUpContainer">
+                <div class="markItUpHeader">
+                  <ul>
+                    <li class="markItUpButton markItUpButton1 "><a href="" accesskey="B" title="Bold [Ctrl+B]">Bold</a></li>
+                    <li class="markItUpButton markItUpButton2 "><a href="" accesskey="I" title="Italic [Ctrl+I]">Italic</a></li>
+                    <li class="markItUpSeparator">---------------</li>
+                    <li class="markItUpButton markItUpButton3 "><a href="" title="Bulleted List">Bulleted List</a></li>
+                    <li class="markItUpButton markItUpButton4 "><a href="" title="Numeric List">Numeric List</a></li>
+                  </ul>
+                </div>
+                <textarea class="required markItUpEditor valid" cols="40" id="job_description" name="job[description]" rows="20">sample</textarea>
+                <div class="markItUpFooter">
+                  <div class="markItUpResizeHandle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="space">
+          <div class="span-9"> <strong>Type of Position:</strong><br>
+            <input id="job_length_of_employment_contractor" name="job[length_of_employment]" value="CONTRACTOR" type="radio">
+            <label for="job_length_of_employment">Contractor</label>
+            <input checked="checked" id="job_length_of_employment_permanent" name="job[length_of_employment]" value="PERMANENT" type="radio">
+            <label for="job_length_of_employment">Permanent</label>
+            <br>
+          </div>
+          <div class="span-9 last"> <strong>Work hours:</strong><br>
+            <input checked="checked" id="job_hours_f" name="job[hours]" value="F" type="radio">
+            <label for="job_hours">Full Time</label>
+            <input id="job_hours_p" name="job[hours]" value="P" type="radio">
+            <label for="job_hours">Part Time</label>
+          </div>
+          <hr class="space">
+          <strong>How to Apply? *</strong><span class="hint">(put your instructions here)</span>
+          <textarea class="required valid" cols="40" id="job_instructions" name="job[instructions]" rows="20">sample</textarea>
+        </div>
+      </div>
+      <!--
+          <div class="span-4 last" style="font-size: 1.5em; color: gray;">
+             <em>Here we will show developers ways to share your job on Facebook, Twitter, Google+ and more.</em> 
+          </div>
+         -->
+      <hr class="space">
+      <div class="step-nav span-24 last">
+        <input id="called_from_step" name="called_from_step" value="1" type="hidden">
+        <div class="prev-step span-12"> <a href="#step-1-fields-section" class="button" id="back-to-step-1">&lt;&lt; Go back</a> &nbsp; </div>
+        <div class="next-step span-12 last">
+          <input class="button" id="job_submit" name="commit" value="Next Step: Preview your ad >>" type="submit">
+        </div>
+      </div>
+    </div>
+  </div>
+  <input id="job_step" name="job[step]" value="2" type="hidden">
   <% end %>
-
-  <div class="field">
-    <%= f.label :post_title %><br />
-    <%= f.text_field :post_title %>
-  </div>
-  <div class="field">
-    <%= f.label :city_state %><br />
-    <%= f.text_field :city_state %>
-  </div>
-  <div class="field">
-    <%= f.label :country_id %><br />
-   
-   
-   
-    <% #select_tag(:country_id, options_for_select(@country.collect{ |c| [c, @country.index(c)]}, 0)) %>
-    <%= f.select :country_id, options_for_select(@country.collect{ |c| [c, @country.index(c)]},@jobpost.country_id) %>
-    
-    <!-- 
-      <% @country.each do |c| %>
-        <%= [c, @country.index(c).to_s] %>
-      <% end %>
-
-     -->
-  </div>
-  <div class="field">
-    <%= f.label :referrer_code %><br />
-    <%= f.text_field :referrer_code %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

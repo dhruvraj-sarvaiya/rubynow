@@ -488,3 +488,76 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
     font-size: 1.8em;
     margin-bottom: 0;
 }
+
+.jobpost-form-step-1 div{
+    font-size:12px;
+}
+
+.jobpost-form-step-1 h2{
+    font-size:24px;
+}
+
+.jobpost-form-step-1 .span-11{
+    width:380px;
+}
+
+#step-1 #job_headline{
+    width:435px;
+}
+
+#job-where{
+    margin-left:-1px;
+}
+
+#job-where #job-where select{
+    width:205px!important;
+}
+
+#job-where input[type="text"]{
+    width:205px!important;
+}
+
+#job-where .span-6{
+    width:210px;
+}
+
+#steps .span-18{
+   
+}
+
+[class*="span"]{
+    margin-left:0px;
+}
+
+.tier-options .span-18{
+    
+}
+
+.prepend-1 input[type="radio"]{
+    float:left;
+    margin-right:5px;
+}
+
+#newAccountForm label{
+    width:auto;
+}
+#job_instructions {
+    width: 800px !important;
+    height: 100px;
+}
+
+
+#job_description {
+    width: 800px !important;
+    
+}
+
+.step2 input[type="radio"]{
+    float:left;
+    margin-right:5px;
+}
+
+.step2 label{
+    min-width:90px; 
+    float:left;
+}

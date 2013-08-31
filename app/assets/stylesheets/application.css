@@ -47,7 +47,7 @@ a.rss {
     margin-bottom: 5px;
 }
 #logo {
-    background-image: url(../images/logo.png);
+    background-image: url(../assets/logo.png);
     background-repeat: no-repeat;
     background-position: top center;
     text-align: center;
@@ -55,7 +55,7 @@ a.rss {
 }
 
 #logo_admin {
-    background-image: url(../images/logo.png);
+    background-image: url(../assets/logo.png);
     background-repeat: no-repeat;
     background-position: top left;
     text-align: center;
@@ -696,7 +696,7 @@ div.ui-dialog form#new_account label.error {
 
 
 #step-1 div#combo div.tier-box {
-    background: url("../images/platinum_bg.png") bottom left;
+    background: url("../assets/platinum_bg.png") bottom left;
     border: 1px solid #9E2021; /* red logo */
 }
 #step-1 div#combo div.header {
@@ -721,7 +721,7 @@ div.ui-dialog form#new_account label.error {
 /* platimum box */
 
 #step-1 div#platinum div.tier-box {
-    background: url("../images/platinum_bg2.png") bottom left;
+    background: url("../assets/platinum_bg2.png") bottom left;
     border: 1px solid #9E2021; /* red logo */
 }
 #step-1 div#platinum div.header {
@@ -739,7 +739,7 @@ div.ui-dialog form#new_account label.error {
 
 /* premium box */
 #step-1 div#premium div.tier-box {
-    background: url("../images/premium_bg2.png");
+    background: url("../assets/premium_bg2.png");
     border: 1px solid gray;
 }
 #step-1 div#premium div.header {
@@ -762,11 +762,11 @@ div.ui-dialog form#new_account label.error {
 
 #step-1 div.tier-options .label-radio {
     padding-left: 104px;
-    background: url("../images/select.png") no-repeat;
+    background: url("../assets/select.png") no-repeat;
 }
 #step-1 div.tier-options .label-radio-check {
     padding-left: 104px;
-    background: url("../images/selected.png") no-repeat;
+    background: url("../assets/selected.png") no-repeat;
 }
 
 #step-1 div.tier-options  p.footer label.label-radio input,

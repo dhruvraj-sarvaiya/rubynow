@@ -14,39 +14,32 @@
   </ul>
 <p></p>
 
-<br>
-    <table cellspacing="5">
-      <tbody><tr><th>ID</th>
-      <th>Preview</th>
-      <th>Posting Type</th>
-      <th>Paid</th>
-      <th>Published</th>
-      <th>Listed</th>
-      <th>Created</th>
-      <th colspan="2"></th>
-      <!-- <th colspan='2'>Buy Premium</th> -->
-        </tr><tr>
-          <td>6277</td>
-          <td><a href="/jobs/6277">sample job post</a></td>
-          <td>Premium</td>
-          <td>No</td>
-          <td align="center">No</td>
-          <td align="center">No</td>
-          <td><span>Sun Aug 11 2013 13:51:29</span></td>
-          <td><a href="/post/jobs/6277/edit">edit / pay</a></td>
-          <td><a href="/account/jobs/6277" data-confirm="Are you sure?" data-method="delete" rel="nofollow">delete</a></td>
-       </tr>
-    </tbody></table>
-
+<br>    
     <% if @user.jobposts.any? %>
       <h3>Job Posts (<%= @user.jobposts.count %>)</h3>
       <ol class="jobposts">
-        <%= render @jobposts %>
+        
       </ol>
+      <table cellspacing="5">
+        <thead>
+           <tr>
+            <th>ID</th>
+            <th>Preview</th>
+            <th>Posting Type</th>
+            <th>Paid</th>
+            <th>Published</th>
+            <th>Listed</th>
+            <th>Created</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
+      <tbody>              
+        <%= render @jobposts %>      
+        </tbody>
+      </table>
       <%= will_paginate @jobposts %>
     <% end %>
-  To create a new job post : <a href="http://jobs.rubynow.com/post/jobs/new" title="Post a new job">Post a Job</a>
-
+  To create a new job post : <%= link_to "Post a Job", new_jobpost_path, :title => 'Post a new job'%>
 </div>
 
       

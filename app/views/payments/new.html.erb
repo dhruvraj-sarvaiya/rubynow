@@ -1,0 +1,27 @@
+<%= form_for @payment, :url => payments_url do |f| %>
+<label for="amount">Amount</label>
+  <%= f.text_field :amount %>
+  <%= fields_for :creditcard, @creditcard do |cc| %>
+  	<label for="first_name">first_name</label>
+    <%= cc.text_field :first_name %>
+
+    <label for="last_name">last_name</label>
+    <%= cc.text_field :last_name %>
+
+    <label for="type">type</label>
+    <%= cc.select :type, [['visa','visa'],['MasterCard','master'],['discover','discover']] %>
+
+    <label for="number">number</label>
+    <%= cc.text_field :number %>
+
+    <label for="month">month</label>
+    <%= cc.select :month, Date::ABBR_MONTHNAMES.compact.each_with_index.collect{|m, i| [m, i+1]}, {:prompt => 'Select'} %>
+
+    <label for="year">year</label>
+    <%= cc.select :year, Array.new(15){|i| Date.current.year+i}, {:prompt => 'Select'} %>
+
+    <label for="verification_value">verification_value</label>
+    <%= cc.text_field :verification_value %>
+   <%= f.submit 'Pay' %>
+ <% end %>  
+  <% end %> 

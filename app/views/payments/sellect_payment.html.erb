@@ -1,0 +1,126 @@
+
+<%= form_for @payment, :url => credit_card_path, :html => {:class =>'cmxform', :autocomplete => 'off', :novalidate =>'novalidate'} do |f| %>
+
+<!-- <form accept-charset="UTF-8" action="/post/payments/6281/payment" autocomplete="off" class="cmxform" id="payment_confirmation_form" method="post" novalidate="novalidate">
+ -->	<div style="margin:0;padding:0;display:inline">
+		<input name="utf8" value="✓" type="hidden">
+		<input name="authenticity_token" value="aoea/V60hKaDTiX/nQ71NIpuutEJr5HyXoc+eNP31SU=" type="hidden">
+	</div>
+<div class="span-24 last">
+	<fieldset>
+		<legend>Job Information</legend>	
+		<div id="job_information_left">
+		  <div class="span-24 last">
+			<div class="column span-3 last">
+			  <strong> Title: </strong>
+			</div>
+			<div class="column span-5 last">
+			   sample job 2
+			</div>
+		  </div>
+		  <div class="span-24 last">
+			<div class="column span-3 last">
+			  <strong> User: </strong>
+			</div>
+			<div class="column span-5 last">
+			   demoacccount4jack@gmail.com
+			</div>
+		  </div>
+		  <div class="span-24 ">
+			<div class="column span-3 last">
+			  <strong> Job Price: </strong>
+			</div>
+			<div class="column">
+			  $ <span id="job_price"> 99 </span>
+			</div>
+			<div id="job_price_coupon">
+				<br>
+				<div class="column span-3 last">
+					<strong> Discount: </strong>
+				</div>
+				<div class="column">
+					$ <span id="discount"></span>
+				</div><br>
+				<div class="column span-3 last">
+					<strong> Total: </strong>
+				</div>
+				<div class="column">
+					$ <span id="total_price"></span>
+				</div>
+			</div>
+		   </div>
+		</div>
+		<div id="job_information_right">
+		       
+	  <input id="user_id" name="user_id" value="5103" type="hidden">
+	  <input id="coupon_id" name="coupon_id" type="hidden">
+	  <input id="job_amount" name="job_amount" value="99" type="hidden">
+
+
+	   
+	     
+	    </div>
+	    <div class="span-20">
+		    <div class="column span-3">
+			  <div class="ui-widget" id="message_coupon_div" style="display:none; width: 300px;">
+			    <div class="ui-state-highlight ui-corner-all" style="margin-top: 8px; padding: 0 .7em;">
+			      <span id="message_coupon" style="text-align: center"></span>
+			    </div>
+			  </div>
+		     </div>
+	     </div>
+
+
+
+		</div>
+	</fieldset>
+</div>
+
+<div class="span-24 last">
+	<fieldset>
+		<legend>Payment Options</legend>            
+		<div class="span-24 last">
+	              <div class="column last span-1" style="padding-top: 10px">
+	                  <input checked="checked" class="radio_payment" id="transaction_payment_method_creditcard" name="transaction[payment_method]" value="creditcard" type="radio">
+	              </div>
+	              <div class="column last span-5">
+	                <label for="transaction_payment_method_creditcard">
+	                  <img alt="Credit Card" src="/images/cc_logos.jpg?1373659231">
+	                </label>
+	              </div>
+	            </div>
+
+	           <!--  <div class="span-24 last">
+	              <div class="column last span-1" style="padding-top: 10px">
+	                  <input class="radio_payment" id="transaction_payment_method_paypal" name="transaction[payment_method]" value="paypal" type="radio">
+	              </div>
+	              <div class="column last span-5">
+	                <label for="transaction_payment_method_paypal">
+	                  <img alt="Paypal" src="/images/paypal_logo.gif?1373659231">
+	                </label>
+	              </div>
+	            </div>
+ -->
+	</fieldset>  
+	<div class="errorForsteps">
+
+  	</div>
+</div>
+
+<div class="span-24 last">
+<hr class="space">
+	  <div class="step-nav span-24 last">
+	    <div class="prev-step column span-12">
+	      <a href="/post/jobs/6281" class="button" id="back-to-select-payment">&lt;&lt; Go back</a>
+	    </div>
+	    <div class="next-step column span-11 last" style="">
+	        <!-- <input class="button" id="transaction_submit" name="commit" style="float: right" value="Next >>" type="submit"> -->
+	    	<%= link_to "Next >>",    credit_card_path, :class => 'button', :style => 'float:right' %>
+	    </div>
+	  </div>
+</div>
+<!-- </form> -->
+<% end %>
+
+
+      

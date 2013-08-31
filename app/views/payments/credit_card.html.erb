@@ -1,0 +1,516 @@
+
+<h1>Credit Card Payment</h1>
+<hr class="space">
+<!-- <form accept-charset="UTF-8" action="/post/credit_cards/6281/credit_card_confirm" autocomplete="off" id="payment_confirmation_form" method="post">
+  <div style="margin:0;padding:0;display:inline">
+    <input name="utf8" value="✓" type="hidden">
+    <input name="authenticity_token" value="NMEIoQMRvuJb7ChRTVQbbeHdBGa2s9kTx1BUkT4AiKo=" type="hidden">
+  </div>
+  <fieldset>
+  <legend>Job Information</legend>
+  <div class="span-23 last">
+    <div class="column span-3 last"> <strong> Title: </strong> </div>
+    <div class="column span-5 last"> sample job 2 </div>
+  </div>
+  <div class="span-23 last">
+    <div class="column span-3 last"> <strong> User: </strong> </div>
+    <div class="column span-5 last"> demoacccount4jack@gmail.com </div>
+  </div>
+  <div class="span-23last">
+    <div class="column span-3 last"> <strong> Job Price: </strong> </div>
+    <div class="column"> $ <span id="job_price"> 99 </span> </div>
+  </div>
+  </fieldset>
+  <div class="span-24 last"> </div>
+  <div id="credit_card_div" style="display: " class="span-24 last">
+    <hr>
+    <div class="span-24 last">
+      <fieldset>
+      <legend>Billing Address and Personal Information</legend>
+      <div class="column span-11 last">
+        <div>
+          <label for="transaction_credit_card_first_name">First Name</label>
+        </div>
+        <div>
+          <input id="transaction_credit_card_first_name" name="transaction[credit_card][first_name]" size="40" tabindex="1" type="text">
+        </div>
+        <div>
+          <label for="transaction_credit_card_street_address">Address Line 1</label>
+        </div>
+        <div>
+          <input id="transaction_credit_card_street_address" name="transaction[credit_card][street_address]" size="40" tabindex="3" type="text">
+        </div>
+        <div>
+          <label for="transaction_credit_card_phone">Phone Number</label>
+        </div>
+        <div>
+          <input id="transaction_credit_card_phone" name="transaction[credit_card][phone]" size="40" tabindex="5" type="text">
+        </div>
+        <div>
+          <label for="transaction_credit_card_region">State/Province/Region</label>
+        </div>
+        <div>
+          <input id="transaction_credit_card_region" name="transaction[credit_card][region]" size="40" tabindex="7" type="text">
+        </div>
+        <div>
+          <label for="transaction_credit_card_country">Country</label>
+        </div>
+        <div>
+          <select id="transaction_credit_card_country" name="transaction[credit_card][country]" tabindex="9">
+            <option value=""></option>
+            <option value="AF">Afghanistan</option>
+            <option value="AL">Albania</option>
+            <option value="DZ">Algeria</option>
+            <option value="AS">American Samoa</option>
+            <option value="AD">Andorra</option>
+            <option value="AO">Angola</option>
+            <option value="AI">Anguilla</option>
+            <option value="AQ">Antarctica</option>
+            <option value="AG">Antigua and Barbuda</option>
+            <option value="AR">Argentina</option>
+            <option value="AM">Armenia</option>
+            <option value="AW">Aruba</option>
+            <option value="AU">Australia</option>
+            <option value="AT">Austria</option>
+            <option value="AZ">Azerbaijan</option>
+            <option value="BS">Bahamas</option>
+            <option value="BH">Bahrain</option>
+            <option value="BD">Bangladesh</option>
+            <option value="BB">Barbados</option>
+            <option value="BY">Belarus</option>
+            <option value="BE">Belgium</option>
+            <option value="BZ">Belize</option>
+            <option value="BJ">Benin</option>
+            <option value="BM">Bermuda</option>
+            <option value="BT">Bhutan</option>
+            <option value="BO">Bolivia</option>
+            <option value="BA">Bosnia and Herzegovina</option>
+            <option value="BW">Botswana</option>
+            <option value="BV">Bouvet Island</option>
+            <option value="BR">Brazil</option>
+            <option value="IO">British Indian Ocean Territory</option>
+            <option value="BN">Brunei Darussalam</option>
+            <option value="BG">Bulgaria</option>
+            <option value="BF">Burkina Faso</option>
+            <option value="BI">Burundi</option>
+            <option value="KH">Cambodia</option>
+            <option value="CM">Cameroon</option>
+            <option value="CA">Canada</option>
+            <option value="CV">Cape Verde</option>
+            <option value="KY">Cayman Islands</option>
+            <option value="CF">Central African Republic</option>
+            <option value="TD">Chad</option>
+            <option value="CL">Chile</option>
+            <option value="CN">China</option>
+            <option value="CX">Christmas Island</option>
+            <option value="CC">Cocos (Keeling) Islands</option>
+            <option value="CO">Colombia</option>
+            <option value="KM">Comoros</option>
+            <option value="CG">Congo</option>
+            <option value="CD">Congo, the Democratic Republic of the</option>
+            <option value="CK">Cook Islands</option>
+            <option value="CR">Costa Rica</option>
+            <option value="CI">Cote D'Ivoire</option>
+            <option value="HR">Croatia</option>
+            <option value="CU">Cuba</option>
+            <option value="CY">Cyprus</option>
+            <option value="CZ">Czech Republic</option>
+            <option value="DK">Denmark</option>
+            <option value="DJ">Djibouti</option>
+            <option value="DM">Dominica</option>
+            <option value="DO">Dominican Republic</option>
+            <option value="EC">Ecuador</option>
+            <option value="EG">Egypt</option>
+            <option value="SV">El Salvador</option>
+            <option value="GQ">Equatorial Guinea</option>
+            <option value="ER">Eritrea</option>
+            <option value="EE">Estonia</option>
+            <option value="ET">Ethiopia</option>
+            <option value="FK">Falkland Islands (Malvinas)</option>
+            <option value="FO">Faroe Islands</option>
+            <option value="FJ">Fiji</option>
+            <option value="FI">Finland</option>
+            <option value="FR">France</option>
+            <option value="GF">French Guiana</option>
+            <option value="PF">French Polynesia</option>
+            <option value="TF">French Southern Territories</option>
+            <option value="GA">Gabon</option>
+            <option value="GM">Gambia</option>
+            <option value="GE">Georgia</option>
+            <option value="DE">Germany</option>
+            <option value="GH">Ghana</option>
+            <option value="GI">Gibraltar</option>
+            <option value="GR">Greece</option>
+            <option value="GL">Greenland</option>
+            <option value="GD">Grenada</option>
+            <option value="GP">Guadeloupe</option>
+            <option value="GU">Guam</option>
+            <option value="GT">Guatemala</option>
+            <option value="GN">Guinea</option>
+            <option value="GW">Guinea-Bissau</option>
+            <option value="GY">Guyana</option>
+            <option value="HT">Haiti</option>
+            <option value="HM">Heard Island and Mcdonald Islands</option>
+            <option value="VA">Holy See (Vatican City State)</option>
+            <option value="HN">Honduras</option>
+            <option value="HK">Hong Kong</option>
+            <option value="HU">Hungary</option>
+            <option value="IS">Iceland</option>
+            <option value="IN">India</option>
+            <option value="ID">Indonesia</option>
+            <option value="IR">Iran, Islamic Republic of</option>
+            <option value="IQ">Iraq</option>
+            <option value="IE">Ireland</option>
+            <option value="IL">Israel</option>
+            <option value="IT">Italy</option>
+            <option value="JM">Jamaica</option>
+            <option value="JP">Japan</option>
+            <option value="JO">Jordan</option>
+            <option value="KZ">Kazakhstan</option>
+            <option value="KE">Kenya</option>
+            <option value="KI">Kiribati</option>
+            <option value="KP">Korea, Democratic People's Republic of</option>
+            <option value="KR">Korea, Republic of</option>
+            <option value="KW">Kuwait</option>
+            <option value="KG">Kyrgyzstan</option>
+            <option value="LA">Lao People's Democratic Republic</option>
+            <option value="LV">Latvia</option>
+            <option value="LB">Lebanon</option>
+            <option value="LS">Lesotho</option>
+            <option value="LR">Liberia</option>
+            <option value="LY">Libyan Arab Jamahiriya</option>
+            <option value="LI">Liechtenstein</option>
+            <option value="LT">Lithuania</option>
+            <option value="LU">Luxembourg</option>
+            <option value="MO">Macao</option>
+            <option value="MK">Macedonia, the Former Yugoslav Republic of</option>
+            <option value="MG">Madagascar</option>
+            <option value="MW">Malawi</option>
+            <option value="MY">Malaysia</option>
+            <option value="MV">Maldives</option>
+            <option value="ML">Mali</option>
+            <option value="MT">Malta</option>
+            <option value="MH">Marshall Islands</option>
+            <option value="MQ">Martinique</option>
+            <option value="MR">Mauritania</option>
+            <option value="MU">Mauritius</option>
+            <option value="YT">Mayotte</option>
+            <option value="MX">Mexico</option>
+            <option value="FM">Micronesia, Federated States of</option>
+            <option value="MD">Moldova, Republic of</option>
+            <option value="MC">Monaco</option>
+            <option value="MN">Mongolia</option>
+            <option value="MS">Montserrat</option>
+            <option value="MA">Morocco</option>
+            <option value="MZ">Mozambique</option>
+            <option value="MM">Myanmar</option>
+            <option value="NA">Namibia</option>
+            <option value="NR">Nauru</option>
+            <option value="NP">Nepal</option>
+            <option value="NL">Netherlands</option>
+            <option value="AN">Netherlands Antilles</option>
+            <option value="NC">New Caledonia</option>
+            <option value="NZ">New Zealand</option>
+            <option value="NI">Nicaragua</option>
+            <option value="NE">Niger</option>
+            <option value="NG">Nigeria</option>
+            <option value="NU">Niue</option>
+            <option value="NF">Norfolk Island</option>
+            <option value="MP">Northern Mariana Islands</option>
+            <option value="NO">Norway</option>
+            <option value="OM">Oman</option>
+            <option value="PK">Pakistan</option>
+            <option value="PW">Palau</option>
+            <option value="PS">Palestinian Territory, Occupied</option>
+            <option value="PA">Panama</option>
+            <option value="PG">Papua New Guinea</option>
+            <option value="PY">Paraguay</option>
+            <option value="PE">Peru</option>
+            <option value="PH">Philippines</option>
+            <option value="PN">Pitcairn</option>
+            <option value="PL">Poland</option>
+            <option value="PT">Portugal</option>
+            <option value="PR">Puerto Rico</option>
+            <option value="QA">Qatar</option>
+            <option value="RE">Reunion</option>
+            <option value="RO">Romania</option>
+            <option value="RU">Russian Federation</option>
+            <option value="RW">Rwanda</option>
+            <option value="SH">Saint Helena</option>
+            <option value="KN">Saint Kitts and Nevis</option>
+            <option value="LC">Saint Lucia</option>
+            <option value="PM">Saint Pierre and Miquelon</option>
+            <option value="VC">Saint Vincent and the Grenadines</option>
+            <option value="WS">Samoa</option>
+            <option value="SM">San Marino</option>
+            <option value="ST">Sao Tome and Principe</option>
+            <option value="SA">Saudi Arabia</option>
+            <option value="SN">Senegal</option>
+            <option value="CS">Serbia and Montenegro</option>
+            <option value="SC">Seychelles</option>
+            <option value="SL">Sierra Leone</option>
+            <option value="SG">Singapore</option>
+            <option value="SK">Slovakia</option>
+            <option value="SI">Slovenia</option>
+            <option value="SB">Solomon Islands</option>
+            <option value="SO">Somalia</option>
+            <option value="ZA">South Africa</option>
+            <option value="GS">South Georgia and the South Sandwich Islands</option>
+            <option value="ES">Spain</option>
+            <option value="LK">Sri Lanka</option>
+            <option value="SD">Sudan</option>
+            <option value="SR">Suriname</option>
+            <option value="SJ">Svalbard and Jan Mayen</option>
+            <option value="SZ">Swaziland</option>
+            <option value="SE">Sweden</option>
+            <option value="CH">Switzerland</option>
+            <option value="SY">Syrian Arab Republic</option>
+            <option value="TW">Taiwan, Province of China</option>
+            <option value="TJ">Tajikistan</option>
+            <option value="TZ">Tanzania, United Republic of</option>
+            <option value="TH">Thailand</option>
+            <option value="TL">Timor-Leste</option>
+            <option value="TG">Togo</option>
+            <option value="TK">Tokelau</option>
+            <option value="TO">Tonga</option>
+            <option value="TT">Trinidad and Tobago</option>
+            <option value="TN">Tunisia</option>
+            <option value="TR">Turkey</option>
+            <option value="TM">Turkmenistan</option>
+            <option value="TC">Turks and Caicos Islands</option>
+            <option value="TV">Tuvalu</option>
+            <option value="UG">Uganda</option>
+            <option value="UA">Ukraine</option>
+            <option value="AE">United Arab Emirates</option>
+            <option value="GB">United Kingdom</option>
+            <option value="US" selected="selected">United States</option>
+            <option value="UM">United States Minor Outlying Islands</option>
+            <option value="UY">Uruguay</option>
+            <option value="UZ">Uzbekistan</option>
+            <option value="VU">Vanuatu</option>
+            <option value="VE">Venezuela</option>
+            <option value="VN">Viet Nam</option>
+            <option value="VG">Virgin Islands, British</option>
+            <option value="VI">Virgin Islands, U.s.</option>
+            <option value="WF">Wallis and Futuna</option>
+            <option value="EH">Western Sahara</option>
+            <option value="YE">Yemen</option>
+            <option value="ZM">Zambia</option>
+            <option value="ZW">Zimbabwe</option>
+          </select>
+        </div>
+      </div>
+      <div class="column span-11 last">
+        <div>
+          <label for="transaction_credit_card_last_name">Last Name</label>
+        </div>
+        <div>
+          <input id="transaction_credit_card_last_name" name="transaction[credit_card][last_name]" size="40" tabindex="2" type="text">
+        </div>
+        <div>
+          <label for="transaction_credit_card_extended_address">Address Line 2</label>
+        </div>
+        <div>
+          <input id="transaction_credit_card_extended_address" name="transaction[credit_card][extended_address]" size="40" tabindex="4" type="text">
+        </div>
+        <div>
+          <label for="transaction_credit_card_locality">City</label>
+        </div>
+        <div>
+          <input id="transaction_credit_card_locality" name="transaction[credit_card][locality]" size="40" tabindex="6" type="text">
+        </div>
+        <div>
+          <label for="transaction_credit_card_postal_code">ZIP</label>
+        </div>
+        <div>
+          <input id="transaction_credit_card_postal_code" name="transaction[credit_card][postal_code]" size="40" tabindex="8" type="text">
+        </div>
+      </div>
+      </fieldset>
+    </div>
+    <div class="span-24 last">
+      <fieldset>
+      <legend>Credit Card</legend>
+      <div class="columnn span-11">
+        <div>
+          <label for="transaction_credit_card_number">Credit Card Number</label>
+        </div>
+        <div>
+          <input id="transaction_credit_card_number" name="transaction[credit_card][number]" size="30" tabindex="9" type="text">
+        </div>
+        <div>
+          <label for="transaction_credit_card_expiration_date">Expiration Date (MM/YYYY)</label>
+        </div>
+        <div>
+          <input id="transaction_credit_card_expiration_date" name="transaction[credit_card][expiration_date]" size="6" tabindex="11" type="text">
+        </div>
+        <div>
+          <input name="transaction[credit_card][vault]" value="0" type="hidden">
+          <input id="transaction_credit_card_vault" name="transaction[credit_card][vault]" value="1" type="checkbox">
+          <label for="transaction_credit_card_vault">Save Credit Card </label>
+        </div>
+      </div>
+      <div class="column span-11 last">
+        <div>
+          <label for="transaction_credit_card_cardholder_name">Name on Card</label>
+        </div>
+        <div>
+          <input id="transaction_credit_card_cardholder_name" name="transaction[credit_card][cardholder_name]" size="40" tabindex="10" type="text">
+        </div>
+        <div>
+          <label for="transaction_credit_card_cvv">CVV (Card Verification Value)</label>
+        </div>
+        <div>
+          <input id="transaction_credit_card_cvv" name="transaction[credit_card][cvv]" size="3" tabindex="12" type="text">
+        </div>
+      </div>
+      <div class="column span-20 last">
+        <div><span id="cvv_note_title">Please Note: </span><span id="cvv_note_content">To ensure the highest security for handling your credit card transactions, we use a third party service that will not store CVV in accordance with PCI guidelines.</span></div>
+      </div>
+      </fieldset>
+    </div>
+  </div>
+  <div id="creditCardError"></div>
+  <div class="span-24 last">
+    <hr class="space">
+    <div class="step-nav span-24 last">
+      <div class="prev-step column span-12"> <a href="/post/payments/6281/select_payment" class="button" id="back-to-select-payment">&lt;&lt; Go back</a> </div>
+      <div class="next-step column span-11 last" style="">
+        <input class="button" id="transaction_submit" name="commit" style="float: right" value="Confirm" type="submit">
+      </div>
+    </div>
+  </div>
+
+</form> -->
+
+<%= form_for @payment, :url => credit_card_confirm_path(@jobpost) do |f| %>
+    <%= fields_for :creditcard, @creditcard do |cc| %>
+        <%= form_for @payment_billing_info, :url => payments_url do |pb| %>
+            <fieldset>
+                <legend>Job Information</legend>
+                <div class="span-23 last">
+                    <div class="column span-3 last"> <strong> Title: </strong> </div>
+                    <div class="column span-5 last"> sample job 2 </div>
+                </div>
+                <div class="span-23 last">
+                    <div class="column span-3 last"> <strong> User: </strong> </div>
+                    <div class="column span-5 last"> demoacccount4jack@gmail.com </div>
+                </div>
+                <div class="span-23last">
+                    <div class="column span-3 last"> <strong> Job Price: </strong> </div>
+                    <div class="column"> $ <span id="job_price"> 99 </span> </div>
+                    <%= f.hidden_field:amount %>
+                </div>
+            </fieldset>
+
+            <div class="span-24 last"> </div>
+            <div id="credit_card_div" style="display: " class="span-24 last">
+                <hr>
+                <div class="span-24 last">
+                    <fieldset>
+                        <legend>Billing Address and Personal Information</legend>
+                        <div class="column span-11 last">
+                            <div>          
+                              <%= pb.label :first_name %>          
+                            </div>
+                            <div>          
+                              <%= pb.text_field :first_name, :class=>"", :size=>"40", :title=>"Please enter a First name", :tabindex =>'1'  %>
+                            </div>
+                            <div>
+                              
+                              <%= pb.label :add_1 %>  
+                            </div>
+                            <div>
+                             
+                              <%= pb.text_field :add_1, :class=>" ", :size=>"40", :title=>"Please enter a address line", :tabindex =>'3'  %>
+                            </div>
+                            <div>
+                              
+                              <%= pb.label :phone %>  
+                            </div>
+                            <div>
+                              
+                              <%= pb.text_field :phone, :class=>"", :size=>"40", :title=>"Please enter a phone number", :tabindex =>'5'  %>
+                            </div>
+                            <div>
+                              
+                              <%= pb.label :state %>  
+                            </div>
+                            <div>
+                              
+                              <%= pb.text_field :state, :class=>"", :size=>"40", :title=>"Please enter a state name", :tabindex =>'7'  %>
+                            </div>
+                            <div>
+                              
+                              <%= pb.label :country_id %>  
+                            </div>
+                            <div>
+                               <%= pb.select :country_id, options_for_select(get_country_list().collect{ |c| [c, c]},0),html_options = { :tabindex =>'9'}
+                               %>
+                            </div>
+                        </div>
+                        <div class="column span-11 last">
+                            <div>
+                              
+                              <%= pb.label :last_name %>  
+                            </div>
+                            <div>
+                              
+                              <%= pb.text_field :last_name, :class=>"", :size=>"40", :title=>"Please enter a last name", :tabindex =>'2'  %>
+                            </div>
+                            <div>
+                              
+                              <%= pb.label :add_2 %>  
+                            </div>
+                            <div>
+                              
+                              <%= pb.text_field :add_2, :class=>"", :size=>"40", :title=>"Please enter address line 2", :tabindex =>'4'  %>
+                            </div>
+                            <div>
+                              
+                              <%= pb.label :City %>  
+                            </div>
+                            <div>
+                              
+                              <%= pb.text_field :city, :class=>"", :size=>"40", :title=>"Please enter a city name", :tabindex =>'6'  %>
+                            </div>
+                            <div>
+                              
+                              <%= pb.label :zip %>  
+                            </div>
+                            <div>
+                              
+                              <%= pb.text_field :zip, :class=>"", :size=>"40", :title=>"Please enter a ZIP", :tabindex =>'8'  %>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+           
+            <%= f.text_field :amount %>
+          
+            <!-- <label for="first_name">first_name</label>
+            <%= cc.text_field :first_name %>
+
+            <label for="last_name">last_name</label>
+            <%= cc.text_field :last_name %> -->
+
+            <label for="type">type</label>
+            <%= cc.select :type, [['visa','visa'],['MasterCard','master'],['discover','discover']] ,html_options={ :tabindex =>'10'} %>
+
+            <label for="number">number</label>
+            <%= cc.text_field :number, :tabindex =>'11' %>
+
+            <label for="month">month</label>
+            <%= cc.select :month, Date::ABBR_MONTHNAMES.compact.each_with_index.collect{|m, i| [m, i+1]}, {:prompt => 'Select'} , :tabindex =>'12'%>
+
+            <label for="year">year</label>
+            <%= cc.select :year, Array.new(15){|i| Date.current.year+i}, {:prompt => 'Select'} , :tabindex =>'13'%>
+
+            <label for="verification_value">verification_value</label>
+            <%= cc.text_field :verification_value , :tabindex =>'14'%>
+           <%= f.submit 'Pay', :tabindex =>'15' %>
+        <% end %>  
+    <% end %>
+<% end %> 

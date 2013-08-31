@@ -1,0 +1,86 @@
+<% #raise @jobpost_detail.inspect %>
+<div class="intro span-24 last">
+  <h2>Step 2: Enter the job Details</h2>
+  <hr>
+</div>
+<!-- errors -->
+<div class="span-20 errorForsteps"> </div>
+<% #form_for(@jobpost_detail) do |f| %>
+<%= form_for [@jobpost, @jobpost_detail], :url => update_jobpostdetail_jobpost_path(@jobpost, @jobpost_detail) do |f| %>
+<div class="span-24 last step2" id="step-1">
+  <input class="required" id="job_headline" name="job[headline]" size="50" value="sample job post" type="text">
+  <h3 id="location">ahmedabad, India</h3>
+  <%= hidden_field_tag("jobpost[id]", @jobpost.id) %>
+  <div class="span-24 borderwithoutcolor">
+    <div class="span-9">     	
+    	<%= f.label :company do%> <strong>Company: *</strong>
+    	<% end %>
+    	<br>
+    	<%= f.text_field :company, :class=>'required', :size=>'33' %>
+      	
+    </div>
+    <div class="span-9 last"> 
+    	
+      <%= f.label :company_url do%> <strong>Company URL: *</strong>
+    	<% end %>
+    	<span class="hint">(start with http://)</span>
+    	<br>
+    	<%= f.text_field :company_url, :class=>'required', :size=>'33' %>
+    </div>
+    <div class="span-21 last">
+      <hr class="space">
+      
+      <%= f.label :company do%> <strong>Enter the job description: *</strong>
+      <% end %>
+    	<br>
+      <!-- <textarea class="required " cols="40" id="job_description" name="job[description]" rows="20">sample111</textarea> -->
+      <%= text_area_tag("jobpostdetail[description]", @jobpost_detail.description, size: "20x40", id:'job_description') %>
+      
+
+      <hr class="space">
+      <div class="span-9"> 
+      	<strong>Type of Position:</strong>
+      	<br>        jobpostdetail
+      	<%= radio_button_tag("jobpostdetail[type_of_position]", "1", !!(@jobpost_detail.type_of_position.nil? || @jobpost_detail.type_of_position == 1), :class => "job_featured_status") %>
+        <%= f.label :company do%> Contractor
+        <% end %>                
+
+        <%= radio_button_tag("jobpostdetail[type_of_position]", "2", !!(@jobpost_detail.type_of_position.nil? || @jobpost_detail.type_of_position == 2), :class => "job_featured_status") %>
+        <%= f.label :company do%> Permanent
+        <% end %>                
+        <br>
+      </div>
+      <div class="span-9 last"> <strong>Work hours:</strong><br>   
+        <%= radio_button_tag("jobpostdetail[work_hours]", "1", !!(@jobpost_detail.work_hours.nil? || @jobpost_detail.work_hours == 1), :class => "job_featured_status") %>
+        <%= f.label :company do%> Full Time
+        <% end %>                
+
+        <%= radio_button_tag("jobpostdetail[work_hours]", "2", !!(@jobpost_detail.work_hours.nil? || @jobpost_detail.work_hours == 2), :class => "job_featured_status") %>
+        <%= f.label :company do%> Part Time
+        <% end %>
+      </div>
+      <hr class="space">
+      <strong>How to Apply? *</strong><span class="hint">(put your instructions here)</span>
+      
+      <%= text_area_tag("jobpostdetail[how_to_apply]", @jobpost_detail.how_to_apply, size: "20x40", id:'job_instructions') %>
+    </div>
+  </div>
+  <!--
+    <div class="span-4 last" style="font-size: 1.5em; color: gray;">
+       <em>Here we will show developers ways to share your job on Facebook, Twitter, Google+ and more.</em> 
+    </div>
+   -->
+  <hr class="space">
+  <div class="step-nav span-24 last">
+    <input id="called_from_step" name="called_from_step" value="2" type="hidden">
+    <div class="prev-step span-12"> 
+    	<a href="#step-1-fields-section" class="button" id="back-to-step-1">&lt;&lt; Go back</a> 
+    	<%= link_to "<< Go back",    edit_jobpost_path(@jobpost), :class =>'button' %>
+    	&nbsp; </div>
+    <div class="next-step span-12 last">
+      
+      <%= f.submit "Next Step: Preview your ad >>", :class => "button" %> 
+    </div>
+  </div>
+<% end %>  
+</div>
