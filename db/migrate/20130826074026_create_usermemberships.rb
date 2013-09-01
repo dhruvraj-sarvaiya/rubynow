@@ -11,7 +11,7 @@ class CreateUsermemberships < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :users, [:user_id]
-    add_index :payments, [:payment_id]
+    # add_index :users, [:user_id]
+    # add_index :payments, [:payment_id]
   end
 end

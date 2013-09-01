@@ -14,6 +14,6 @@ class CreatePaymentBillingInfos < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :payments, [:payment_id]
+    # add_index :payments, [:payment_id]
   end
 end

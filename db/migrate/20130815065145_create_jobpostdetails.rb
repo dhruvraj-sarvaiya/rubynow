@@ -11,6 +11,6 @@ class CreateJobpostdetails < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :jobposts, [:jobpost_id]
+    # add_index :jobposts, [:jobpost_id]
   end
 end
