@@ -1,8 +1,7 @@
 class JobpostsController < ApplicationController
-  include SessionsHelper
-  #before_filter :signed_in_user, only: [:edit, :update]
-  # before_filter :correct_user,   only: [:edit, :update]
-  helper_method:signed_in_user,:correct_user
+  before_filter :signed_in_user, only: [:edit, :update]
+  before_filter :correct_user,   only: [:edit, :update]
+  #helper_method:signed_in_user,:correct_user
   
   COUNTRY = ["Afghanistan", "Aland Islands", "Albania", "Algeria", "American Samoa", "Andorra", "Angola",
         "Anguilla", "Antarctica", "Antigua And Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria",
@@ -194,18 +193,19 @@ class JobpostsController < ApplicationController
 
   private
 
-    def signed_in_user
-      #raise SessionsHelper.signed_in?
-      @current_user ||= User.find_by_remember_token(cookies[:remember_token])
-      # raise @current_user.inspect
-      raise current_user.nil?.inspect
-    end    
+    # def signed_in_user
+    #   raise SessionsHelper.signed_in?
+    #   @current_user ||= User.find_by_remember_token(cookies[:remember_token])
+    #   # # raise @current_user.inspect
+    #   #raise current_user.nil?.inspect
+    # end    
 
     def correct_user
       #@user = User.find(params[:id])
       #redirect_to(root_path) unless current_user?(@user)
 
       @jobpost = current_user.jobposts.find_by_id(params[:id])
-      redirect_to root_path if @jobpost.nil?
+      # raise @jobpost.inspect
+      redirect_to root_path,notice:'You are authorize to access this page' if @jobpost.nil?
     end
 end

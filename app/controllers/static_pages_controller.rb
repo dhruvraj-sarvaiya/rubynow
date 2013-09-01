@@ -1,5 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
+    @jobpost = Jobpost.all
+    # raise @jobpost.inspect
   end
 
   def whyrubynow

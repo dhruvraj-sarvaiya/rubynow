@@ -28,7 +28,24 @@
 	<hr>
 	<div class="span-24 last" id="jobs-list">
   		<ul class="jobs">
-    
+    		<% @jobpost.each do |j| %>
+    			<li class ="l1" id="">
+    				<h3>
+    					<%= link_to "#{j.post_title}",    j %>
+    					<span>
+    						<%= if !j.jobpostdetail.nil? 
+    							"at #{j.jobpostdetail.company}"
+    							end		
+    						%>
+    					</span>
+    					<span class="date">
+    						<%= "#{j.created_at.strftime('%Y-%m-%d')}" %>
+		          		</span>
+    				</h3>
+    				<%= "#{j.city_state} ," %>
+    				<%= "#{get_country_list()[j.country_id].inspect}" %>
+    			</li>
+    		<% end %>
 		    <li class="featured l2" id="job_6272">
 		      <h3><a href="http://jobs.rubynow.com/jobs/6272">Sr. Ruby/Rails developer who wants to help change lives</a> <span>at Novu LLC</span>
 		        <span class="date">

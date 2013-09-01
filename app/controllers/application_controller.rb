@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  #include SessionsHelper
+  include SessionsHelper
   helper :all # include all helpers, all the time
 
   # See ActionController::RequestForgeryProtection for details
