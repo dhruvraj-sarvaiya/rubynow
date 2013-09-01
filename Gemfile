@@ -8,6 +8,7 @@ gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'activemerchant', :require => 'active_merchant'
 gem 'authorize-net'
+# gem 'sinatra', '1.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -34,7 +35,8 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.12.2'
+  # gem 'pg', '0.12.2'
+  gem 'sqlite3', '1.3.5'
 end 
 
 # To use ActiveModel has_secure_password
